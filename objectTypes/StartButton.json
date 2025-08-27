@@ -1,0 +1,9 @@
+{
+	"name": "StartButton",
+	"plugin-id": "Button",
+	"sid": 335861058083682,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [],
+	"behaviorTypes": []
+}

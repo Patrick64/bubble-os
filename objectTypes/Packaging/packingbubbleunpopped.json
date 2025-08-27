@@ -1,0 +1,38 @@
+{
+	"name": "packingbubbleunpopped",
+	"plugin-id": "SVGPicture",
+	"sid": 954458611354566,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [
+		{
+			"name": "hasSpawned",
+			"type": "boolean",
+			"desc": "",
+			"show": true,
+			"sid": 598385398147495
+		},
+		{
+			"name": "originalX",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 748061392512297
+		},
+		{
+			"name": "hasPopped",
+			"type": "boolean",
+			"desc": "",
+			"show": true,
+			"sid": 940673234403724
+		}
+	],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Tween",
+			"name": "Tween",
+			"sid": 458928601426316
+		}
+	],
+	"effectTypes": []
+}

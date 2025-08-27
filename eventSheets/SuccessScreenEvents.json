@@ -1,0 +1,581 @@
+{
+	"name": "SuccessScreenEvents",
+	"events": [
+		{
+			"eventType": "variable",
+			"name": "LastGame",
+			"type": "string",
+			"initialValue": "",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 753689165380689
+		},
+		{
+			"eventType": "variable",
+			"name": "SuccessFadeout",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 671921591613956
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "for",
+					"objectClass": "System",
+					"sid": 498017673839985,
+					"parameters": {
+						"name": "\"SwirlEmail\"",
+						"start-index": "0",
+						"end-index": "100"
+					}
+				}
+			],
+			"actions": [],
+			"sid": 960493865918542
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 609777486523363
+				}
+			],
+			"actions": [
+				{
+					"id": "set-layer-effect-parameter",
+					"objectClass": "System",
+					"sid": 945553420569246,
+					"parameters": {
+						"layer": "\"SuccessScreen\"",
+						"effect": "\"WarpRipple\"",
+						"parameter-index": "1",
+						"value": "SuccessFadeout/5"
+					}
+				},
+				{
+					"id": "set-layer-effect-parameter",
+					"objectClass": "System",
+					"sid": 783736097079095,
+					"parameters": {
+						"layer": "\"SuccessScreen\"",
+						"effect": "\"Glitch\"",
+						"parameter-index": "0",
+						"value": "SuccessFadeout"
+					}
+				}
+			],
+			"sid": 321312056743327,
+			"disabled": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 719354375714031,
+							"parameters": {
+								"variable": "SuccessFadeout",
+								"comparison": 5,
+								"value": "100"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 742760284830196,
+							"parameters": {
+								"variable": "SuccessFadeout",
+								"value": "0"
+							}
+						}
+					],
+					"sid": 610025831690328,
+					"disabled": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 946706149165245,
+							"parameters": {
+								"variable": "SuccessFadeout",
+								"comparison": 4,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 277477109686548,
+							"parameters": {
+								"variable": "SuccessFadeout",
+								"value": "dt*50"
+							}
+						}
+					],
+					"sid": 229634636590733
+				}
+			]
+		},
+		{
+			"functionName": "DoSuccess",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionCopyPicked": false,
+			"functionIsAsync": false,
+			"functionParameters": [
+				{
+					"name": "DesktopIcon",
+					"type": "string",
+					"initialValue": "",
+					"comment": "",
+					"sid": 973563544515868
+				}
+			],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 808029896041692,
+					"parameters": {
+						"variable": "LastGame",
+						"value": "CurrentGame"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 683222970354163,
+					"parameters": {
+						"variable": "CurrentGame",
+						"value": "\"\""
+					}
+				},
+				{
+					"id": "set-layer-visible",
+					"objectClass": "System",
+					"sid": 166369952181158,
+					"parameters": {
+						"layer": "\"SuccessScreen\"",
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-layer-interactive",
+					"objectClass": "System",
+					"sid": 731659279994626,
+					"parameters": {
+						"layer": "\"SuccessScreen\"",
+						"interactive": true
+					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 206474884918345,
+					"parameters": {
+						"audio-file": "Minigame won",
+						"loop": "not-looping",
+						"volume": "0",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 616953820189143,
+					"disabled": true,
+					"parameters": {
+						"seconds": "2",
+						"use-timescale": true
+					}
+				},
+				{
+					"id": "set-layer-visible",
+					"objectClass": "System",
+					"sid": 162837392195479,
+					"disabled": true,
+					"parameters": {
+						"layer": "\"SuccessScreen\"",
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 338642487395378,
+					"parameters": {
+						"variable": "SuccessFadeout",
+						"value": "1"
+					}
+				},
+				{
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 974634070149523,
+					"parameters": {
+						"variable": "GamesComplete",
+						"value": "1"
+					}
+				}
+			],
+			"sid": 642247619419779,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [],
+					"actions": [],
+					"sid": 599125208684029,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [],
+							"actions": [],
+							"sid": 772085225706727
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 333991435326131,
+							"parameters": {
+								"variable": "GamesComplete",
+								"comparison": 5,
+								"value": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "BubbleMeterCollected1",
+							"sid": 559169694831338,
+							"parameters": {
+								"visibility": "visible"
+							}
+						}
+					],
+					"sid": 409369225517876
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 414345554252437,
+							"parameters": {
+								"variable": "GamesComplete",
+								"comparison": 5,
+								"value": "2"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "BubbleMeterCollected2",
+							"sid": 228478545614099,
+							"parameters": {
+								"visibility": "visible"
+							}
+						}
+					],
+					"sid": 371147148814652
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 235993337295054,
+							"parameters": {
+								"variable": "GamesComplete",
+								"comparison": 5,
+								"value": "3"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "BubbleMeterCollected3",
+							"sid": 371939870241287,
+							"parameters": {
+								"visibility": "visible"
+							}
+						}
+					],
+					"sid": 357432027063575
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 667139888524327,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "WindowAmused"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-layer-visible",
+					"objectClass": "System",
+					"sid": 345996182699090,
+					"parameters": {
+						"layer": "\"SuccessScreen\"",
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-layer-interactive",
+					"objectClass": "System",
+					"sid": 636650933526131,
+					"parameters": {
+						"layer": "\"SuccessScreen\"",
+						"interactive": false
+					}
+				}
+			],
+			"sid": 515586465824064,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 148340677678303,
+							"parameters": {
+								"variable": "GamesComplete",
+								"comparison": 5,
+								"value": "3"
+							}
+						}
+					],
+					"actions": [
+						{
+							"callFunction": "GamesFinished",
+							"sid": 839918782756562
+						}
+					],
+					"sid": 150795693405107
+				}
+			]
+		},
+		{
+			"functionName": "GamesFinished",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionCopyPicked": false,
+			"functionIsAsync": false,
+			"functionParameters": [],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [
+				{
+					"id": "set-layer-visible",
+					"objectClass": "System",
+					"sid": 715678157603161,
+					"parameters": {
+						"layer": "\"GameCompleteLayer\"",
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-layer-interactive",
+					"objectClass": "System",
+					"sid": 686619667140824,
+					"parameters": {
+						"layer": "\"GameCompleteLayer\"",
+						"interactive": true
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 503072532050494,
+					"parameters": {
+						"seconds": "1.0",
+						"use-timescale": true
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 880847175079273,
+					"parameters": {
+						"variable": "CurrentGame",
+						"value": "\"UnlockWindow\""
+					}
+				}
+			],
+			"sid": 299996837796150
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 514449750792843,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "WindowDocUnlocked"
+					}
+				},
+				{
+					"id": "layer-is-visible",
+					"objectClass": "System",
+					"sid": 774337496050540,
+					"parameters": {
+						"layer": "\"GameCompleteLayer\""
+					}
+				},
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 746991424337013,
+					"parameters": {
+						"variable": "CurrentGame",
+						"comparison": 0,
+						"value": "\"UnlockWindow\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-visible",
+					"objectClass": "IconDocumentDragArea",
+					"sid": 412363777192808,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "IconDocumentImage",
+					"sid": 701751041070846,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "IconDocumentText",
+					"sid": 508531583032190,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-position",
+					"objectClass": "IconDocumentDragArea",
+					"sid": 717743390501489,
+					"parameters": {
+						"x": "50",
+						"y": "195"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "WindowEmail",
+					"sid": 789542415836911,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-layer-visible",
+					"objectClass": "System",
+					"sid": 752041449819714,
+					"parameters": {
+						"layer": "\"EmailLayer\"",
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-layer-interactive",
+					"objectClass": "System",
+					"sid": 509685523427735,
+					"parameters": {
+						"layer": "\"EmailLayer\"",
+						"interactive": true
+					}
+				},
+				{
+					"id": "set-layer-visible",
+					"objectClass": "System",
+					"sid": 563104592748577,
+					"parameters": {
+						"layer": "\"GameCompleteLayer\"",
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-layer-interactive",
+					"objectClass": "System",
+					"sid": 156321452441184,
+					"parameters": {
+						"layer": "\"GameCompleteLayer\"",
+						"interactive": false
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "WindowHacker",
+					"sid": 764198513219717,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 946976854496646,
+					"parameters": {
+						"audio-file": "Email recieved from publisher",
+						"loop": "not-looping",
+						"volume": "0",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
+					}
+				}
+			],
+			"sid": 623358234105408
+		}
+	],
+	"sid": 121692873848710
+}

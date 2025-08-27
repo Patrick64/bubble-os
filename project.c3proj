@@ -1,0 +1,1254 @@
+{
+	"projectFormatVersion": 1,
+	"savedWithRelease": 44902,
+	"name": "Bubble OS",
+	"runtime": "c3",
+	"useWorker": "auto",
+	"bundleAddons": false,
+	"usedAddons": [
+		{
+			"type": "plugin",
+			"id": "Audio",
+			"name": "Audio",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Browser",
+			"name": "Browser",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Button",
+			"name": "Button",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Keyboard",
+			"name": "Keyboard",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Mouse",
+			"name": "Mouse",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "NinePatch",
+			"name": "9-patch",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "SVGPicture",
+			"name": "SVG Picture",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Sprite",
+			"name": "Sprite",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Text",
+			"name": "Text",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "TiledBg",
+			"name": "Tiled Background",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "DragnDrop",
+			"name": "Drag & Drop",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "EightDir",
+			"name": "8 Direction",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Fade",
+			"name": "Fade",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "MoveTo",
+			"name": "Move To",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Platform",
+			"name": "Platform",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Rotate",
+			"name": "Rotate",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Tween",
+			"name": "Tween",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "scrollto",
+			"name": "Scroll To",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "solid",
+			"name": "Solid",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "effect",
+			"id": "Coolok_Glitch",
+			"name": "Glitch",
+			"author": "Coolok",
+			"bundled": false,
+			"version": "1.0.0.0"
+		},
+		{
+			"type": "effect",
+			"id": "glowvertical",
+			"name": "Glow vertical",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "effect",
+			"id": "noise",
+			"name": "Noise",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "effect",
+			"id": "pulse",
+			"name": "Pulse",
+			"author": "Danguafer/Silexars",
+			"bundled": false
+		},
+		{
+			"type": "effect",
+			"id": "radialpixellate",
+			"name": "Radial pixellate",
+			"author": "Brad Larson",
+			"bundled": false
+		},
+		{
+			"type": "effect",
+			"id": "swirl",
+			"name": "Swirl",
+			"author": "Brad Larson",
+			"bundled": false
+		},
+		{
+			"type": "effect",
+			"id": "warpripple",
+			"name": "Warp ripple",
+			"author": "Scirra",
+			"bundled": false
+		}
+	],
+	"uniqueId": "v18bn2zj2t6",
+	"objectTypes": {
+		"items": [
+			"Player",
+			"TiledBackground",
+			"Tomato",
+			"Keyboard",
+			"SVGPicture",
+			"taskbar",
+			"taskbar2",
+			"DesktopIcon",
+			"StartButton",
+			"Browser",
+			"knifesvgrepocom",
+			"honeysvgrepocom",
+			"IconText",
+			"hatchefsvgrepocom",
+			"Mouse",
+			"packingwindow",
+			"bubbleGuyWindow",
+			"bubbleguycircle",
+			"bubbleguybody",
+			"bubbleguybad",
+			"bubbleguygood",
+			"BubbleGuyLimb",
+			"StandardText",
+			"Text",
+			"SuccessText",
+			"PackingPortview",
+			"PackingScoreText",
+			"BubbleGuyMask",
+			"BGGrid",
+			"Taskbar3",
+			"WindowEmail",
+			"WindowHacker",
+			"WrapPopSheet",
+			"WrapPopRoll",
+			"SnakeBoundary",
+			"WindowAmused",
+			"WindowDocUnlocked",
+			"Text2",
+			"emailsendbutton",
+			"Start",
+			"StartScreenLoginArea",
+			"Splash",
+			"Audio",
+			"BubbleCollectMeter",
+			"BubbleMeterCollected1",
+			"BubbleMeterCollected2",
+			"BubbleMeterCollected3",
+			"WrapPopBar",
+			"WrapPopBarFill",
+			"PackingMaskBar",
+			"IconBubbleBurst"
+		],
+		"subfolders": [
+			{
+				"items": [
+					"IconTrashText",
+					"IconTrashImage",
+					"PackagingGameIconImage",
+					"PackagingGameIconText",
+					"BubbleGuyGameIconText",
+					"BubbleGuyGameIconImage",
+					"SnakeIconText",
+					"SnakeIconImage"
+				],
+				"subfolders": [
+					{
+						"items": [
+							"IconDocumentImage",
+							"IconDocumentText",
+							"IconDocumentDragArea",
+							"PackingGameClickArea",
+							"PackingGameClickArea2",
+							"BubbleGuyClickArea",
+							"BubbleGuyIconImage",
+							"PackingGameClickArea3",
+							"PackingGameClickArea4",
+							"SnakeIconClick"
+						],
+						"subfolders": [],
+						"name": "IconDocument"
+					}
+				],
+				"name": "Icons"
+			},
+			{
+				"items": [
+					"EmailBox",
+					"EmailMessage",
+					"EmailTitle",
+					"EmailWindow"
+				],
+				"subfolders": [],
+				"name": "Email"
+			},
+			{
+				"items": [
+					"closeButton",
+					"Popup1"
+				],
+				"subfolders": [],
+				"name": "Popups"
+			},
+			{
+				"items": [
+					"packingbubblepopped",
+					"packingbubbleunpopped"
+				],
+				"subfolders": [],
+				"name": "Packaging"
+			},
+			{
+				"items": [
+					"SnakeBottle",
+					"snakebubbles",
+					"SnakeBubbleSprite",
+					"SnakeWindow",
+					"SnakeWindowInner",
+					"rubberduck",
+					"SnakeWindow2",
+					"skull"
+				],
+				"subfolders": [],
+				"name": "Snake"
+			},
+			{
+				"items": [],
+				"subfolders": [],
+				"name": "Success"
+			}
+		]
+	},
+	"functionsName": "Functions",
+	"autosaveData": null,
+	"containers": [
+		{
+			"members": [
+				"DesktopIcon",
+				"IconText"
+			]
+		},
+		{
+			"members": [
+				"IconDocumentDragArea",
+				"IconDocumentImage",
+				"IconDocumentText"
+			]
+		},
+		{
+			"members": [
+				"closeButton",
+				"Popup1"
+			]
+		}
+	],
+	"families": {
+		"items": [],
+		"subfolders": []
+	},
+	"layouts": {
+		"items": [
+			"Desktop",
+			"Start Screen",
+			"Prefabs"
+		],
+		"subfolders": []
+	},
+	"eventSheets": {
+		"items": [
+			"Event sheet 1",
+			"StartScreenEvents",
+			"PackagingEvents",
+			"BubbleGuyEvents",
+			"SnakeEvents",
+			"SuccessScreenEvents",
+			"EmailEvents",
+			"IconEvents"
+		],
+		"subfolders": []
+	},
+	"rootFileFolders": {
+		"script": {
+			"items": [],
+			"subfolders": []
+		},
+		"sound": {
+			"items": [
+				{
+					"name": "BubbleOS login screen.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 409954210514630,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Cat Bubble Lost.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 192401444141965,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Duck Obstacle Hit.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 424280220336264,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Duck Soap Collected AND Wrap Bubble Popped AND Cat Bubble Collected.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 649027484335486,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Email recieved from publisher.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 887778733023163,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "General click.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 180328333794136,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Minigame won.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 705018154440195,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Splash NatPat Logo.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 812549752447877,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Typing.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 222905137473173,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Wrap Popup Ad.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 624726602084970,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Hacked.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 692459355397431,
+					"file-info": {
+						"purpose": "none"
+					}
+				}
+			],
+			"subfolders": []
+		},
+		"music": {
+			"items": [
+				{
+					"name": "Hacked bg music.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 518486167246972,
+					"file-info": {
+						"purpose": "none"
+					}
+				}
+			],
+			"subfolders": []
+		},
+		"video": {
+			"items": [],
+			"subfolders": []
+		},
+		"font": {
+			"items": [
+				{
+					"name": "UbuntuSansMono-VariableFont_wght.ttf",
+					"type": "application/font-sfnt",
+					"sid": 524270361833618,
+					"file-info": {
+						"purpose": "none"
+					}
+				}
+			],
+			"subfolders": []
+		},
+		"icon": {
+			"items": [
+				{
+					"name": "icon-16.png",
+					"type": "image/png",
+					"sid": 362073474367082,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "icon-32.png",
+					"type": "image/png",
+					"sid": 432195833223069,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "icon-64.png",
+					"type": "image/png",
+					"sid": 957008088707148,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "icon-128.png",
+					"type": "image/png",
+					"sid": 995322147024318,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "icon-256.png",
+					"type": "image/png",
+					"sid": 935888069184288,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "icon-512.png",
+					"type": "image/png",
+					"sid": 802441876882566,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "loading-logo.png",
+					"type": "image/png",
+					"sid": 750556424812255,
+					"icon-info": {
+						"purpose": "loading-logo"
+					}
+				}
+			],
+			"subfolders": []
+		},
+		"general": {
+			"items": [
+				{
+					"name": "22890231_6708298.svg",
+					"type": "image/svg+xml",
+					"sid": 476243435158863,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "knife-svgrepo-com.svg",
+					"type": "image/svg+xml",
+					"sid": 927479952542068,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "honey-svgrepo-com.svg",
+					"type": "image/svg+xml",
+					"sid": 505495718968232,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "birthday-cake-svgrepo-com.svg",
+					"type": "image/svg+xml",
+					"sid": 611917214779098,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "blender-svgrepo-com.svg",
+					"type": "image/svg+xml",
+					"sid": 467473776096616,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "hat-chef-svgrepo-com.svg",
+					"type": "image/svg+xml",
+					"sid": 922189022451795,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "popup1.svg",
+					"type": "image/svg+xml",
+					"sid": 562531298078152,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "close button.svg",
+					"type": "image/svg+xml",
+					"sid": 516748271142525,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "popup2.svg",
+					"type": "image/svg+xml",
+					"sid": 849349676025163,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "popup3.svg",
+					"type": "image/svg+xml",
+					"sid": 352091093142669,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "packing-window.svg",
+					"type": "image/svg+xml",
+					"sid": 247136894169696,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "packing-bubble-unpopped.svg",
+					"type": "image/svg+xml",
+					"sid": 785285476478907,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "packing-bubble-popped.svg",
+					"type": "image/svg+xml",
+					"sid": 706222178720752,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "bubble-guy-circle.svg",
+					"type": "image/svg+xml",
+					"sid": 499357621384103,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "bubble-guy-body.svg",
+					"type": "image/svg+xml",
+					"sid": 866523291284161,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "bubble-guy-bad.svg",
+					"type": "image/svg+xml",
+					"sid": 259165142822201,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "bubble-guy-good.svg",
+					"type": "image/svg+xml",
+					"sid": 439247501308903,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "rubber-duck.svg",
+					"type": "image/svg+xml",
+					"sid": 679291991932775,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "snake-bubbles.svg",
+					"type": "image/svg+xml",
+					"sid": 953933150621195,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "skull.svg",
+					"type": "image/svg+xml",
+					"sid": 411424759564758,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "BG Grid.svg",
+					"type": "image/svg+xml",
+					"sid": 407922823107874,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Taskbar.svg",
+					"type": "image/svg+xml",
+					"sid": 496153029075983,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Variant=BubbleCat, Size=Large.svg",
+					"type": "image/svg+xml",
+					"sid": 435051321048199,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Variant=BubbleWrap, Size=Large.svg",
+					"type": "image/svg+xml",
+					"sid": 936749831006809,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Variant=Duck, Size=Large.svg",
+					"type": "image/svg+xml",
+					"sid": 688640520907701,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Variant=Doc, Size=Large.svg",
+					"type": "image/svg+xml",
+					"sid": 239657796726496,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Variant=Email, Size=Large.svg",
+					"type": "image/svg+xml",
+					"sid": 767770398366982,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Variant=Hacker, Size=Large.svg",
+					"type": "image/svg+xml",
+					"sid": 327101266255901,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Variant=Trash, Size=Large.svg",
+					"type": "image/svg+xml",
+					"sid": 149523436159345,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Window Mail.svg",
+					"type": "image/svg+xml",
+					"sid": 535859652001661,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "popup-ad-2.svg",
+					"type": "image/svg+xml",
+					"sid": 396201563957254,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "popup-ad-3.svg",
+					"type": "image/svg+xml",
+					"sid": 732021266743388,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "popup-ad-1.svg",
+					"type": "image/svg+xml",
+					"sid": 875644334793762,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Close.svg",
+					"type": "image/svg+xml",
+					"sid": 572746425494573,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Window Hacker.svg",
+					"type": "image/svg+xml",
+					"sid": 850243436012895,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "WrapPop Window.svg",
+					"type": "image/svg+xml",
+					"sid": 229745041746170,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "WrapPop Sheet.svg",
+					"type": "image/svg+xml",
+					"sid": 683887132913991,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "WrapPop Roll.svg",
+					"type": "image/svg+xml",
+					"sid": 794965248193596,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "bubble-popped.svg",
+					"type": "image/svg+xml",
+					"sid": 350364421058087,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "bubble-unpopped.svg",
+					"type": "image/svg+xml",
+					"sid": 566041577405103,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "WindowAmused.svg",
+					"type": "image/svg+xml",
+					"sid": 645051556880997,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "window-hacker-success.svg",
+					"type": "image/svg+xml",
+					"sid": 222140336377406,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "email-send-button.svg",
+					"type": "image/svg+xml",
+					"sid": 494411035309217,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "popup-ad-4.svg",
+					"type": "image/svg+xml",
+					"sid": 582934899106876,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Start.svg",
+					"type": "image/svg+xml",
+					"sid": 416177390170951,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Splash.svg",
+					"type": "image/svg+xml",
+					"sid": 727190726855424,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Bubble Collect Meter.svg",
+					"type": "image/svg+xml",
+					"sid": 738084344553151,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Bubble Meter Collected.svg",
+					"type": "image/svg+xml",
+					"sid": 912859896365432,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "WrapPop Bar.svg",
+					"type": "image/svg+xml",
+					"sid": 908679379340249,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "WrapPop BarFill.svg",
+					"type": "image/svg+xml",
+					"sid": 392535753028146,
+					"file-info": {
+						"purpose": "none"
+					}
+				}
+			],
+			"subfolders": [
+				{
+					"items": [
+						{
+							"name": "duck-s.svg",
+							"type": "image/svg+xml",
+							"sid": 398755326432437,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "duck-w.svg",
+							"type": "image/svg+xml",
+							"sid": 792112363336239,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "duck-e.svg",
+							"type": "image/svg+xml",
+							"sid": 709440639392148,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "duck-n.svg",
+							"type": "image/svg+xml",
+							"sid": 107743579430056,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "Property 1=Empty.svg",
+							"type": "image/svg+xml",
+							"sid": 264602601468650,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "Soap.svg",
+							"type": "image/svg+xml",
+							"sid": 446925724626919,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "Swirly.svg",
+							"type": "image/svg+xml",
+							"sid": 890544778812564,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "Property 1=Collected.svg",
+							"type": "image/svg+xml",
+							"sid": 110789759150683,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "Duck SoapIcon Collected.svg",
+							"type": "image/svg+xml",
+							"sid": 566014885739942,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "Duck SoapIcon Empty.svg",
+							"type": "image/svg+xml",
+							"sid": 574392714751732,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "Duck Window.svg",
+							"type": "image/svg+xml",
+							"sid": 765853252116692,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "Duck Soap.svg",
+							"type": "image/svg+xml",
+							"sid": 774517601976257,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "Duck Swirly.svg",
+							"type": "image/svg+xml",
+							"sid": 915741131183790,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "Duck BubbleTrail.svg",
+							"type": "image/svg+xml",
+							"sid": 748198901293038,
+							"file-info": {
+								"purpose": "none"
+							}
+						}
+					],
+					"subfolders": [],
+					"name": "Snake"
+				},
+				{
+					"items": [
+						{
+							"name": "Arm Frame.svg",
+							"type": "image/svg+xml",
+							"sid": 226203583049522,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "Arm L.svg",
+							"type": "image/svg+xml",
+							"sid": 633102948183305,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "Arm S.svg",
+							"type": "image/svg+xml",
+							"sid": 669909381733926,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "Arm Toxic.svg",
+							"type": "image/svg+xml",
+							"sid": 751257222837638,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "ArmIcon S.svg",
+							"type": "image/svg+xml",
+							"sid": 788128191619239,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "Cat.svg",
+							"type": "image/svg+xml",
+							"sid": 898312691504848,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "Cat Window.svg",
+							"type": "image/svg+xml",
+							"sid": 126350709594234,
+							"file-info": {
+								"purpose": "none"
+							}
+						}
+					],
+					"subfolders": [],
+					"name": "BubbleCat"
+				},
+				{
+					"items": [
+						{
+							"name": "WindowEmailSent.svg",
+							"type": "image/svg+xml",
+							"sid": 505320960517399,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "WindowEmailReceived.svg",
+							"type": "image/svg+xml",
+							"sid": 360742901458917,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "WindowEmailRejection.svg",
+							"type": "image/svg+xml",
+							"sid": 470434971282830,
+							"file-info": {
+								"purpose": "none"
+							}
+						}
+					],
+					"subfolders": [],
+					"name": "Email"
+				}
+			]
+		}
+	},
+	"timelines": {
+		"items": [
+			"Timeline 1"
+		],
+		"subfolders": [
+			{
+				"items": [],
+				"subfolders": []
+			}
+		]
+	},
+	"flowcharts": {
+		"items": [
+			"Flowchart 1"
+		],
+		"subfolders": []
+	},
+	"properties": {
+		"description": "",
+		"version": "1.0.0.0",
+		"autoIncrementVersion": false,
+		"author": "",
+		"authorEmail": "",
+		"authorWebsite": "",
+		"appId": "",
+		"pixelRounding": false,
+		"zAxisScale": "normalized",
+		"fov": 0.7853981633974483,
+		"useLoaderLayout": false,
+		"fullscreenMode": "letterbox-scale",
+		"fullscreenQuality": "high",
+		"viewportFit": "auto",
+		"backgroundColor": [
+			0,
+			0,
+			0,
+			0
+		],
+		"splashColor": [
+			1,
+			1,
+			1,
+			0
+		],
+		"useThemeColor": false,
+		"themeColor": [
+			1,
+			1,
+			1,
+			0
+		],
+		"orientations": "landscape",
+		"webgpu": "auto",
+		"gpuPreference": "high-performance",
+		"scriptsType": "module",
+		"framerateMode": "vsync",
+		"sampling": "trilinear",
+		"downscaling": "medium",
+		"renderingMode": "auto",
+		"anisotropicFiltering": "auto",
+		"zNear": 1,
+		"zFar": 10000,
+		"maxSpriteSheetSize": 2048,
+		"loaderStyle": "splash",
+		"preloadSounds": true,
+		"cordovaiOSScheme": "app",
+		"cordovaAndroidScheme": "https",
+		"exportFileStructure": "folders",
+		"uidAllocationMode": "increment"
+	},
+	"viewportWidth": 1920,
+	"viewportHeight": 1080,
+	"firstLayout": "Start Screen"
+}

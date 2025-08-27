@@ -1,0 +1,427 @@
+{
+	"name": "EmailEvents",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-drop",
+					"objectClass": "IconDocumentDragArea",
+					"sid": 352177699590966,
+					"behaviorType": "DragDrop"
+				},
+				{
+					"id": "is-overlapping-another-object",
+					"objectClass": "IconDocumentDragArea",
+					"sid": 995347975035836,
+					"parameters": {
+						"object": "EmailBox"
+					}
+				}
+			],
+			"actions": [],
+			"sid": 448508688751802,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 406124194417483,
+							"parameters": {
+								"variable": "CurrentGame",
+								"comparison": 0,
+								"value": "\"UnlockWindow\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "emailsendbutton",
+							"sid": 362321817498073,
+							"parameters": {
+								"visibility": "visible"
+							}
+						}
+					],
+					"sid": 936450771277766
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 244339730779628
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 473365907663337,
+							"parameters": {
+								"variable": "EmailLayerSwirl",
+								"value": "1"
+							}
+						},
+						{
+							"id": "set-position",
+							"objectClass": "IconDocumentDragArea",
+							"sid": 124039454352514,
+							"parameters": {
+								"x": "97",
+								"y": "280"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "IconDocumentDragArea",
+							"sid": 852671522168615,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "IconDocumentImage",
+							"sid": 816105437334223,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "IconDocumentText",
+							"sid": 767798628060009,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 534883520809309,
+							"parameters": {
+								"audio-file": "Hacked",
+								"loop": "not-looping",
+								"volume": "0",
+								"stereo-pan": "0",
+								"tag-optional": "\"\""
+							}
+						}
+					],
+					"sid": 563758677002372
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "for",
+					"objectClass": "System",
+					"sid": 313982014977287,
+					"parameters": {
+						"name": "\"SwirlEmail\"",
+						"start-index": "0",
+						"end-index": "100"
+					}
+				}
+			],
+			"actions": [],
+			"sid": 315458461392950
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 100081105107131
+				}
+			],
+			"actions": [
+				{
+					"id": "set-layer-effect-parameter",
+					"objectClass": "System",
+					"sid": 663121376908418,
+					"parameters": {
+						"layer": "\"EmailLayer\"",
+						"effect": "\"Swirl\"",
+						"parameter-index": "0",
+						"value": "EmailLayerSwirl"
+					}
+				}
+			],
+			"sid": 267301874689390,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 601358930949068,
+							"parameters": {
+								"variable": "EmailLayerSwirl",
+								"comparison": 5,
+								"value": "100"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "reset-eventvar",
+							"objectClass": "System",
+							"sid": 968519609065271,
+							"parameters": {
+								"variable": "EmailLayerSwirl"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "WindowHacker",
+							"sid": 361133040861636,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "WindowEmail",
+							"sid": 351637202536114,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 257310050009154,
+							"parameters": {
+								"audio-file": "Hacked bg music",
+								"loop": "looping",
+								"volume": "-8",
+								"stereo-pan": "0",
+								"tag-optional": "\"\""
+							}
+						}
+					],
+					"sid": 378831643616705
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-x-seconds",
+					"objectClass": "System",
+					"sid": 793504473594096,
+					"parameters": {
+						"interval-seconds": "0.1"
+					}
+				},
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 923958470394884,
+					"parameters": {
+						"variable": "EmailLayerSwirl",
+						"comparison": 4,
+						"value": "0"
+					}
+				},
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 284161185742674,
+					"parameters": {
+						"variable": "EmailLayerSwirl",
+						"comparison": 2,
+						"value": "100"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 583630020692281,
+					"parameters": {
+						"variable": "EmailLayerSwirl",
+						"value": "5"
+					}
+				}
+			],
+			"sid": 806130692610300
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 539284995150914,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "WindowHacker"
+					}
+				},
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 303213938964943,
+					"parameters": {
+						"variable": "GamesComplete",
+						"comparison": 0,
+						"value": "0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-layer-visible",
+					"objectClass": "System",
+					"sid": 273225415177669,
+					"parameters": {
+						"layer": "\"EmailLayer\"",
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-layer-interactive",
+					"objectClass": "System",
+					"sid": 247666474274659,
+					"parameters": {
+						"layer": "\"EmailLayer\"",
+						"interactive": false
+					}
+				},
+				{
+					"id": "set-layer-visible",
+					"objectClass": "System",
+					"sid": 439315929452194,
+					"parameters": {
+						"layer": "\"GameIconsLayer\"",
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-layer-interactive",
+					"objectClass": "System",
+					"sid": 706430327178493,
+					"parameters": {
+						"layer": "\"GameIconsLayer\"",
+						"interactive": true
+					}
+				}
+			],
+			"sid": 261987847931493
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 720470364800818,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "emailsendbutton"
+					}
+				},
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 679716109963359,
+					"parameters": {
+						"variable": "CurrentGame",
+						"comparison": 0,
+						"value": "\"UnlockWindow\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-layer-visible",
+					"objectClass": "System",
+					"sid": 280041379193213,
+					"parameters": {
+						"layer": "\"IconLayer\"",
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "emailsendbutton",
+					"sid": 367937681500610,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-image",
+					"objectClass": "WindowEmail",
+					"sid": 250232856180012,
+					"parameters": {
+						"file": "WindowEmailSent.svg"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 676511769055519,
+					"parameters": {
+						"seconds": "2",
+						"use-timescale": true
+					}
+				},
+				{
+					"id": "set-image",
+					"objectClass": "WindowEmail",
+					"sid": 292062178462019,
+					"parameters": {
+						"file": "WindowEmailReceived.svg"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 362793254676330,
+					"parameters": {
+						"seconds": "2",
+						"use-timescale": true
+					}
+				},
+				{
+					"id": "set-image",
+					"objectClass": "WindowEmail",
+					"sid": 363708941282284,
+					"parameters": {
+						"file": "WindowEmailRejection.svg"
+					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 703838858875714,
+					"parameters": {
+						"audio-file": "Email recieved from publisher",
+						"loop": "not-looping",
+						"volume": "0",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
+					}
+				}
+			],
+			"sid": 803107601038372
+		}
+	],
+	"sid": 952129767512833
+}

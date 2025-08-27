@@ -1,0 +1,16 @@
+{
+	"name": "bubbleguycircle",
+	"plugin-id": "SVGPicture",
+	"sid": 529110289455827,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "solid",
+			"name": "Solid",
+			"sid": 429317597185996
+		}
+	],
+	"effectTypes": []
+}

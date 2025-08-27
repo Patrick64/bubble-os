@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="172.14178mm"
+   height="48.7612mm"
+   viewBox="0 0 172.14178 48.7612"
+   version="1.1"
+   id="svg5"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     showgrid="false" />
+  <defs
+     id="defs2" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-17.731343,-68.708952)">
+    <rect
+       style="fill:#ffdd55;stroke-width:0.264583"
+       id="rect111"
+       width="172.14178"
+       height="48.761196"
+       x="17.731342"
+       y="68.708954"
+       inkscape:export-filename="popup.svg"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <text
+       xml:space="preserve"
+       style="font-size:45.0329px;fill:#ffffff;stroke-width:3.75274"
+       x="35.791302"
+       y="92.841171"
+       id="text167"
+       transform="scale(0.8415812,1.1882395)"><tspan
+         sodipodi:role="line"
+         id="tspan165"
+         style="fill:#ffffff;stroke-width:3.75274"
+         x="35.791302"
+         y="92.841171">POPUP2</tspan></text>
+  </g>
+</svg>

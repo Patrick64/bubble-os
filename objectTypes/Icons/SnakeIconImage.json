@@ -1,0 +1,16 @@
+{
+	"name": "SnakeIconImage",
+	"plugin-id": "SVGPicture",
+	"sid": 496968137636674,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Fade",
+			"name": "Fade",
+			"sid": 774870887259395
+		}
+	],
+	"effectTypes": []
+}

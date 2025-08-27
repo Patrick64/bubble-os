@@ -1,0 +1,56 @@
+{
+	"name": "SnakeBottle",
+	"plugin-id": "Sprite",
+	"sid": 990620200191122,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 96,
+						"height": 96,
+						"originX": 0,
+						"originY": 0,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 969939,
+						"collisionPoly": {
+							"points": [
+								0.33499999999999996,
+								0.245000171661377,
+								0.6000001525878904,
+								0.2699997901916504,
+								0.76,
+								0.37,
+								0.7100002288818359,
+								0.834999847412109,
+								0.24,
+								0.7700001144409179,
+								0.24,
+								0.365
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 411058238215048,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

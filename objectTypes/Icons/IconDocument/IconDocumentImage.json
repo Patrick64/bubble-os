@@ -1,0 +1,26 @@
+{
+	"name": "IconDocumentImage",
+	"plugin-id": "SVGPicture",
+	"sid": 546820820785006,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "DragnDrop",
+			"name": "DragDrop",
+			"sid": 177530445866088
+		},
+		{
+			"behaviorId": "Tween",
+			"name": "Tween",
+			"sid": 206788372474108
+		}
+	],
+	"effectTypes": [
+		{
+			"effectId": "glowvertical",
+			"name": "GlowVertical"
+		}
+	]
+}

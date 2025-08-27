@@ -1,0 +1,154 @@
+{
+	"name": "Event sheet 1",
+	"events": [
+		{
+			"eventType": "include",
+			"includeSheet": "PackagingEvents"
+		},
+		{
+			"eventType": "include",
+			"includeSheet": "BubbleGuyEvents"
+		},
+		{
+			"eventType": "include",
+			"includeSheet": "SnakeEvents"
+		},
+		{
+			"eventType": "include",
+			"includeSheet": "SuccessScreenEvents"
+		},
+		{
+			"eventType": "include",
+			"includeSheet": "EmailEvents"
+		},
+		{
+			"eventType": "include",
+			"includeSheet": "IconEvents"
+		},
+		{
+			"eventType": "variable",
+			"name": "CurrentGame",
+			"type": "string",
+			"initialValue": "",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 863480479521712
+		},
+		{
+			"eventType": "variable",
+			"name": "EmailLayerSwirl",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 303714679363985
+		},
+		{
+			"eventType": "variable",
+			"name": "GamesComplete",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 685653558818116
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "Player",
+					"sid": 884249590027122,
+					"parameters": {
+						"object": "Tomato"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "Tomato",
+					"sid": 240632189817681
+				}
+			],
+			"sid": 789692399195863
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Keyboard",
+					"sid": 435542098850574,
+					"parameters": {
+						"key": 37
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-mirrored",
+					"objectClass": "Player",
+					"sid": 474708839080073,
+					"parameters": {
+						"state": "mirrored"
+					}
+				}
+			],
+			"sid": 471645458126684
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Keyboard",
+					"sid": 414306161802931,
+					"parameters": {
+						"key": 39
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-mirrored",
+					"objectClass": "Player",
+					"sid": 254457138423361,
+					"parameters": {
+						"state": "not-mirrored"
+					}
+				}
+			],
+			"sid": 601254019021019
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 217505978533707
+				}
+			],
+			"actions": [
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 365465600680467,
+					"parameters": {
+						"audio-file": "BubbleOS login screen",
+						"loop": "not-looping",
+						"volume": "0",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
+					}
+				}
+			],
+			"sid": 786655315576275
+		}
+	],
+	"sid": 579070008617261
+}

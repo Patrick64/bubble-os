@@ -1,0 +1,686 @@
+{
+	"name": "BubbleGuyEvents",
+	"events": [
+		{
+			"eventType": "variable",
+			"name": "BubbleGuyScore",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 103048023475522
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 664625035967116,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "BubbleGuyClickArea"
+					}
+				},
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 520394831475970,
+					"parameters": {
+						"variable": "CurrentGame",
+						"comparison": 0,
+						"value": "\"\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-layer-visible",
+					"objectClass": "System",
+					"sid": 261791790831533,
+					"parameters": {
+						"layer": "\"BubbleGuyLayer\"",
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-layer-interactive",
+					"objectClass": "System",
+					"sid": 764034452548903,
+					"parameters": {
+						"layer": "\"BubbleGuyLayer\"",
+						"interactive": true
+					}
+				},
+				{
+					"id": "set-layer-visible",
+					"objectClass": "System",
+					"sid": 642777333460625,
+					"parameters": {
+						"layer": "\"BubbleGuyInnerLayer\"",
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-layer-interactive",
+					"objectClass": "System",
+					"sid": 833249341360677,
+					"parameters": {
+						"layer": "\"BubbleGuyInnerLayer\"",
+						"interactive": true
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 609227129873519,
+					"parameters": {
+						"variable": "CurrentGame",
+						"value": "\"bubbleguy\""
+					}
+				},
+				{
+					"id": "destroy",
+					"objectClass": "bubbleguybad",
+					"sid": 941952827019889
+				},
+				{
+					"id": "destroy",
+					"objectClass": "bubbleguygood",
+					"sid": 222971611330525
+				},
+				{
+					"id": "stop-animation",
+					"objectClass": "BubbleGuyLimb",
+					"sid": 461347387736417
+				},
+				{
+					"id": "set-animation-frame",
+					"objectClass": "BubbleGuyLimb",
+					"sid": 546958771096819,
+					"parameters": {
+						"frame-number": "0"
+					}
+				}
+			],
+			"sid": 515209024804337
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 261315787156702,
+					"parameters": {
+						"variable": "CurrentGame",
+						"comparison": 0,
+						"value": "\"bubbleguy\""
+					}
+				},
+				{
+					"id": "every-x-seconds",
+					"objectClass": "System",
+					"sid": 124722296581026,
+					"parameters": {
+						"interval-seconds": "0.8"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 772978226192593,
+					"parameters": {
+						"object-to-create": "bubbleguygood",
+						"layer": "\"BubbleGuyInnerLayer\"",
+						"x": "bubbleGuyWindow.X + random(0,bubbleGuyWindow.Width)",
+						"y": "bubbleGuyWindow.Y +bubbleGuyWindow.Height + 50",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				}
+			],
+			"sid": 814332390877841
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-x-seconds",
+					"objectClass": "System",
+					"sid": 396206991643158,
+					"parameters": {
+						"interval-seconds": "2"
+					}
+				},
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 273378760387669,
+					"parameters": {
+						"variable": "CurrentGame",
+						"comparison": 0,
+						"value": "\"bubbleguy\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 830008984193796,
+					"parameters": {
+						"object-to-create": "bubbleguybad",
+						"layer": "\"BubbleGuyInnerLayer\"",
+						"x": "bubbleGuyWindow.X + random(0,bubbleGuyWindow.Width)",
+						"y": "bubbleGuyWindow.Y +bubbleGuyWindow.Height + 50",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				}
+			],
+			"sid": 101412765783096
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-created",
+					"objectClass": "bubbleguygood",
+					"sid": 986581966469335
+				}
+			],
+			"actions": [
+				{
+					"id": "move-to-position",
+					"objectClass": "bubbleguygood",
+					"sid": 555617255694878,
+					"behaviorType": "MoveTo",
+					"parameters": {
+						"x": "bubbleGuyWindow.X + random(0,bubbleGuyWindow.Width)",
+						"y": "bubbleGuyWindow.Y - 60",
+						"mode": "direct"
+					}
+				},
+				{
+					"id": "set-max-speed",
+					"objectClass": "bubbleguygood",
+					"sid": 978978972043018,
+					"behaviorType": "MoveTo",
+					"parameters": {
+						"max-speed": "random(50,200)"
+					}
+				}
+			],
+			"sid": 944939374747322,
+			"isOrBlock": true
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-created",
+					"objectClass": "bubbleguybad",
+					"sid": 874502323563727
+				}
+			],
+			"actions": [
+				{
+					"id": "move-to-position",
+					"objectClass": "bubbleguybad",
+					"sid": 630843553033598,
+					"behaviorType": "MoveTo",
+					"parameters": {
+						"x": "bubbleGuyWindow.X + random(0,bubbleGuyWindow.Width)",
+						"y": "bubbleGuyWindow.Y - 60",
+						"mode": "direct"
+					}
+				},
+				{
+					"id": "set-speed",
+					"objectClass": "bubbleguybad",
+					"sid": 623693992118535,
+					"behaviorType": "MoveTo",
+					"parameters": {
+						"speed": "random(150,300)"
+					}
+				}
+			],
+			"sid": 102059770866759,
+			"isOrBlock": true
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-hit-solid",
+					"objectClass": "bubbleguygood",
+					"sid": 734357909697889,
+					"behaviorType": "MoveTo"
+				}
+			],
+			"actions": [],
+			"sid": 349508557026691
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "BubbleGuyLimb",
+					"sid": 709916987472465,
+					"parameters": {
+						"object": "bubbleguygood"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "bubbleguygood",
+					"sid": 463725702781905
+				},
+				{
+					"id": "set-width",
+					"objectClass": "BubbleGuyLimb",
+					"sid": 888201727492147,
+					"parameters": {
+						"width": "74"
+					}
+				},
+				{
+					"id": "set-height",
+					"objectClass": "BubbleGuyLimb",
+					"sid": 516335650473077,
+					"parameters": {
+						"height": "74"
+					}
+				},
+				{
+					"id": "set-animation-frame",
+					"objectClass": "BubbleGuyLimb",
+					"sid": 958929805192369,
+					"parameters": {
+						"frame-number": "1"
+					}
+				},
+				{
+					"callFunction": "BubbleGuyCheckWin",
+					"sid": 541670316403095
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 898879615555410,
+					"parameters": {
+						"audio-file": "Duck Soap Collected AND Wrap Bubble Popped AND Cat Bubble Collected",
+						"loop": "not-looping",
+						"volume": "0",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
+					}
+				}
+			],
+			"sid": 227984691221398
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "BubbleGuyLimb",
+					"sid": 177755433848229,
+					"parameters": {
+						"object": "bubbleguybad"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "bubbleguybad",
+					"sid": 103544146144504
+				},
+				{
+					"id": "set-width",
+					"objectClass": "BubbleGuyLimb",
+					"sid": 597336641643081,
+					"parameters": {
+						"width": "16"
+					}
+				},
+				{
+					"id": "set-height",
+					"objectClass": "BubbleGuyLimb",
+					"sid": 233321959057628,
+					"parameters": {
+						"height": "16"
+					}
+				},
+				{
+					"id": "set-animation-frame",
+					"objectClass": "BubbleGuyLimb",
+					"sid": 360899446371692,
+					"parameters": {
+						"frame-number": "0"
+					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 180912938289082,
+					"parameters": {
+						"audio-file": "Cat Bubble Lost",
+						"loop": "not-looping",
+						"volume": "0",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
+					}
+				}
+			],
+			"sid": 245698054616924
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-created",
+					"objectClass": "bubbleguygood",
+					"sid": 423539356510266
+				}
+			],
+			"actions": [
+				{
+					"id": "move-to-bottom",
+					"objectClass": "bubbleguygood",
+					"sid": 275352133935096
+				}
+			],
+			"sid": 470590638280307
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-created",
+					"objectClass": "bubbleguybad",
+					"sid": 834868036854462
+				}
+			],
+			"actions": [
+				{
+					"id": "move-to-bottom",
+					"objectClass": "bubbleguybad",
+					"sid": 695552158797093
+				}
+			],
+			"sid": 574717001015379
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-arrived",
+					"objectClass": "bubbleguygood",
+					"sid": 554610451970783,
+					"behaviorType": "MoveTo"
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "bubbleguygood",
+					"sid": 931475636063573
+				}
+			],
+			"sid": 343010103153799
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-arrived",
+					"objectClass": "bubbleguybad",
+					"sid": 668082452367229,
+					"behaviorType": "MoveTo"
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "bubbleguybad",
+					"sid": 765284747056918
+				}
+			],
+			"sid": 737214858340940
+		},
+		{
+			"functionName": "BubbleGuyCheckWin",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionCopyPicked": false,
+			"functionIsAsync": false,
+			"functionParameters": [],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 105993846738994,
+					"parameters": {
+						"variable": "BubbleGuyScore",
+						"value": "0"
+					}
+				}
+			],
+			"sid": 651453890561085,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "for-each",
+							"objectClass": "System",
+							"sid": 518362820741163,
+							"parameters": {
+								"object": "BubbleGuyLimb"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 798209862781531,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-width",
+									"objectClass": "BubbleGuyLimb",
+									"sid": 380259780707786,
+									"parameters": {
+										"comparison": 4,
+										"width": "30"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "add-to-eventvar",
+									"objectClass": "System",
+									"sid": 719756333783933,
+									"parameters": {
+										"variable": "BubbleGuyScore",
+										"value": "1"
+									}
+								}
+							],
+							"sid": 840455929474918
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 787415236802655,
+							"parameters": {
+								"variable": "CurrentGame",
+								"comparison": 0,
+								"value": "\"bubbleguy\""
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 826091800903904,
+							"parameters": {
+								"variable": "BubbleGuyScore",
+								"comparison": 5,
+								"value": "4"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "reset-eventvar",
+							"objectClass": "System",
+							"sid": 326070846506864,
+							"parameters": {
+								"variable": "BubbleGuyScore"
+							}
+						},
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 554011238407958,
+							"parameters": {
+								"layer": "\"BubbleGuyLayer\"",
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-layer-interactive",
+							"objectClass": "System",
+							"sid": 530846965220623,
+							"parameters": {
+								"layer": "\"BubbleGuyLayer\"",
+								"interactive": false
+							}
+						},
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 106305434893326,
+							"parameters": {
+								"layer": "\"BubbleGuyInnerLayer\"",
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-layer-interactive",
+							"objectClass": "System",
+							"sid": 232829207429739,
+							"parameters": {
+								"layer": "\"BubbleGuyInnerLayer\"",
+								"interactive": false
+							}
+						},
+						{
+							"id": "destroy",
+							"objectClass": "BubbleGuyClickArea",
+							"sid": 140215130148526
+						},
+						{
+							"callFunction": "DoSuccess",
+							"sid": 778176481529621,
+							"parameters": [
+								"\"\""
+							]
+						}
+					],
+					"sid": 306380113789457
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 722411520242186,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "WindowAmused"
+					}
+				},
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 814657725540385,
+					"parameters": {
+						"variable": "LastGame",
+						"comparison": 0,
+						"value": "\"bubbleguy\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "spawn-another-object",
+					"objectClass": "BubbleGuyIconImage",
+					"sid": 175586617103836,
+					"parameters": {
+						"object": "IconBubbleBurst",
+						"layer": "\"GameIconsLayer\"",
+						"image-point": "0",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "start-fade",
+					"objectClass": "BubbleGuyGameIconImage",
+					"sid": 320052759599354,
+					"behaviorType": "Fade"
+				},
+				{
+					"id": "destroy",
+					"objectClass": "BubbleGuyIconImage",
+					"sid": 769648852590105,
+					"disabled": true
+				},
+				{
+					"id": "destroy",
+					"objectClass": "BubbleGuyGameIconText",
+					"sid": 525695966904381
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 513510228533311,
+					"parameters": {
+						"variable": "CurrentGame",
+						"value": "\"\""
+					}
+				},
+				{
+					"id": "move-to-top",
+					"objectClass": "IconBubbleBurst",
+					"sid": 338791771918227
+				}
+			],
+			"sid": 670089418338046
+		}
+	],
+	"sid": 917375443855721
+}

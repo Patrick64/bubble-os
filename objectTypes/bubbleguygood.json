@@ -1,0 +1,16 @@
+{
+	"name": "bubbleguygood",
+	"plugin-id": "SVGPicture",
+	"sid": 792489246373147,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "MoveTo",
+			"name": "MoveTo",
+			"sid": 552956424277234
+		}
+	],
+	"effectTypes": []
+}

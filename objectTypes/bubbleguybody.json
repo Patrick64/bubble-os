@@ -1,0 +1,21 @@
+{
+	"name": "bubbleguybody",
+	"plugin-id": "SVGPicture",
+	"sid": 815060063652422,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "EightDir",
+			"name": "8Direction",
+			"sid": 631283757831820
+		},
+		{
+			"behaviorId": "Rotate",
+			"name": "Rotate",
+			"sid": 374450732989840
+		}
+	],
+	"effectTypes": []
+}

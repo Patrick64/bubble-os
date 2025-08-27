@@ -1,0 +1,10 @@
+{
+	"name": "EmailTitle",
+	"plugin-id": "Text",
+	"sid": 413987782857915,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": []
+}

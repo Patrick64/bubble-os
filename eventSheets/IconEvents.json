@@ -1,0 +1,27 @@
+{
+	"name": "IconEvents",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-animation-finished",
+					"objectClass": "IconBubbleBurst",
+					"sid": 690761024225412,
+					"parameters": {
+						"animation": "\"Animation 1\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "IconBubbleBurst",
+					"sid": 124228733851097
+				}
+			],
+			"sid": 780979940637333
+		}
+	],
+	"sid": 999164622329024
+}

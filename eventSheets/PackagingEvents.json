@@ -1,0 +1,598 @@
+{
+	"name": "PackagingEvents",
+	"events": [
+		{
+			"eventType": "variable",
+			"name": "PackingScore",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 338740926300713
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 335036889597604,
+					"parameters": {
+						"variable": "CurrentGame",
+						"comparison": 0,
+						"value": "\"packaging\""
+					}
+				},
+				{
+					"id": "every-x-seconds",
+					"objectClass": "System",
+					"sid": 644872497309628,
+					"parameters": {
+						"interval-seconds": "1"
+					}
+				},
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 945477771883357,
+					"parameters": {
+						"variable": "PackingScore",
+						"comparison": 4,
+						"value": "2"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 280685773430529,
+					"parameters": {
+						"object-to-create": "Popup1",
+						"layer": "\"Popups\"",
+						"x": "random(50,1100)",
+						"y": "random(100,800)",
+						"create-hierarchy": true,
+						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 455988742606762,
+					"parameters": {
+						"audio-file": "Wrap Popup Ad",
+						"loop": "not-looping",
+						"volume": "0",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
+					}
+				}
+			],
+			"sid": 273457158146900
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 709405376144348,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "closeButton"
+					}
+				},
+				{
+					"id": "pick-parent",
+					"objectClass": "closeButton",
+					"sid": 561048353444878,
+					"parameters": {
+						"parent": "Popup1",
+						"which": "all"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "Popup1",
+					"sid": 887276593770458
+				}
+			],
+			"sid": 947962427763947
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-created",
+					"objectClass": "Popup1",
+					"sid": 640370981268352
+				}
+			],
+			"actions": [
+				{
+					"id": "set-image-by-name",
+					"objectClass": "Popup1",
+					"sid": 776119350295636,
+					"parameters": {
+						"file": "\"popup-ad-\" & str(floor(random(1,5))) & \".svg\""
+					}
+				}
+			],
+			"sid": 173851185821297
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 372556518146261,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "PackingGameClickArea"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-layer-visible",
+					"objectClass": "System",
+					"sid": 699350820036728,
+					"parameters": {
+						"layer": "\"PackingBubblesLayer\"",
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-layer-interactive",
+					"objectClass": "System",
+					"sid": 721094357853007,
+					"parameters": {
+						"layer": "\"PackingBubblesLayer\"",
+						"interactive": true
+					}
+				},
+				{
+					"id": "set-layer-visible",
+					"objectClass": "System",
+					"sid": 869678627054318,
+					"parameters": {
+						"layer": "\"PackingInnerLayer\"",
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-layer-interactive",
+					"objectClass": "System",
+					"sid": 313906828410549,
+					"parameters": {
+						"layer": "\"PackingInnerLayer\"",
+						"interactive": true
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 302538063303427,
+					"parameters": {
+						"variable": "CurrentGame",
+						"value": "\"packaging\""
+					}
+				},
+				{
+					"id": "set-layer-visible",
+					"objectClass": "System",
+					"sid": 530766778899022,
+					"parameters": {
+						"layer": "\"Popups\"",
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-layer-interactive",
+					"objectClass": "System",
+					"sid": 534936337628107,
+					"parameters": {
+						"layer": "\"Popups\"",
+						"interactive": true
+					}
+				},
+				{
+					"id": "destroy",
+					"objectClass": "Popup1",
+					"sid": 720736064775464
+				}
+			],
+			"sid": 138954721718556
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 846121222410437
+				},
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 597305644468935,
+					"parameters": {
+						"variable": "CurrentGame",
+						"comparison": 0,
+						"value": "\"packaging\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-text",
+					"objectClass": "PackingScoreText",
+					"sid": 121505966599693,
+					"parameters": {
+						"text": "\"Bubbles popped: \" & str(PackingScore)"
+					}
+				}
+			],
+			"sid": 686402951887206,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "pick-all",
+							"objectClass": "System",
+							"sid": 770381897105007,
+							"parameters": {
+								"object": "packingbubbleunpopped"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-x",
+							"objectClass": "packingbubbleunpopped",
+							"sid": 662722251845978,
+							"parameters": {
+								"x": "packingbubbleunpopped.X + dt*100"
+							}
+						}
+					],
+					"sid": 622888932023319
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 258837702769475
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "packingbubbleunpopped",
+					"sid": 486941923088462
+				}
+			],
+			"sid": 543785116848765
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 999478090075787,
+					"parameters": {
+						"variable": "CurrentGame",
+						"comparison": 0,
+						"value": "\"packaging\""
+					}
+				},
+				{
+					"id": "every-x-seconds",
+					"objectClass": "System",
+					"sid": 922678917837866,
+					"parameters": {
+						"interval-seconds": "1.5"
+					}
+				}
+			],
+			"actions": [],
+			"sid": 568500192856060,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "for",
+							"objectClass": "System",
+							"sid": 343117282493156,
+							"parameters": {
+								"name": "\"Create initial packaing bubbles\"",
+								"start-index": "0",
+								"end-index": "4"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "create-object",
+							"objectClass": "System",
+							"sid": 704391777393790,
+							"parameters": {
+								"object-to-create": "packingbubbleunpopped",
+								"layer": "\"PackingInnerLayer\"",
+								"x": "WrapPopRoll.X + 100",
+								"y": "WrapPopRoll.Y + 40 + loopindex*110",
+								"create-hierarchy": false,
+								"template-name": "\"\""
+							}
+						}
+					],
+					"sid": 107503702437315
+				},
+				{
+					"eventType": "block",
+					"conditions": [],
+					"actions": [],
+					"sid": 599693165272381
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 420162548845659,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "packingbubbleunpopped"
+					}
+				},
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "packingbubbleunpopped",
+					"sid": 365343159787291,
+					"parameters": {
+						"instance-variable": "hasPopped"
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "set-image",
+					"objectClass": "packingbubbleunpopped",
+					"sid": 719415715450341,
+					"parameters": {
+						"file": "bubble-popped.svg"
+					}
+				},
+				{
+					"id": "toggle-boolean-instvar",
+					"objectClass": "packingbubbleunpopped",
+					"sid": 420618998731645,
+					"parameters": {
+						"instance-variable": "hasPopped"
+					}
+				},
+				{
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 340019182457998,
+					"parameters": {
+						"variable": "PackingScore",
+						"value": "1"
+					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 294480618040668,
+					"parameters": {
+						"audio-file": "Duck Soap Collected AND Wrap Bubble Popped AND Cat Bubble Collected",
+						"loop": "not-looping",
+						"volume": "0",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
+					}
+				},
+				{
+					"id": "set-width",
+					"objectClass": "PackingMaskBar",
+					"sid": 980439651140044,
+					"parameters": {
+						"width": "((20-PackingScore) / 20) * 867"
+					}
+				}
+			],
+			"sid": 779727834754268
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-created",
+					"objectClass": "packingbubbleunpopped",
+					"sid": 876140039321887
+				}
+			],
+			"actions": [
+				{
+					"id": "move-to-bottom",
+					"objectClass": "packingbubbleunpopped",
+					"sid": 686173832572168
+				}
+			],
+			"sid": 698943448489553
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 542765395117743,
+					"parameters": {
+						"variable": "PackingScore",
+						"comparison": 5,
+						"value": "20"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "reset-eventvar",
+					"objectClass": "System",
+					"sid": 517255182629820,
+					"parameters": {
+						"variable": "PackingScore"
+					}
+				},
+				{
+					"id": "set-layer-visible",
+					"objectClass": "System",
+					"sid": 333086154772537,
+					"parameters": {
+						"layer": "\"PackingBubblesLayer\"",
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-layer-interactive",
+					"objectClass": "System",
+					"sid": 740772003756954,
+					"parameters": {
+						"layer": "\"PackingBubblesLayer\"",
+						"interactive": false
+					}
+				},
+				{
+					"id": "set-layer-visible",
+					"objectClass": "System",
+					"sid": 835500864943896,
+					"parameters": {
+						"layer": "\"PackingInnerLayer\"",
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-layer-interactive",
+					"objectClass": "System",
+					"sid": 429447862115139,
+					"parameters": {
+						"layer": "\"PackingInnerLayer\"",
+						"interactive": false
+					}
+				},
+				{
+					"id": "set-layer-visible",
+					"objectClass": "System",
+					"sid": 532912250905914,
+					"parameters": {
+						"layer": "\"Popups\"",
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-layer-interactive",
+					"objectClass": "System",
+					"sid": 599817703537513,
+					"parameters": {
+						"layer": "\"Popups\"",
+						"interactive": false
+					}
+				},
+				{
+					"callFunction": "DoSuccess",
+					"sid": 958601478044811,
+					"parameters": [
+						"\"\""
+					]
+				}
+			],
+			"sid": 844465601685789
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 252612306267492,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "WindowAmused"
+					}
+				},
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 527179465066875,
+					"parameters": {
+						"variable": "LastGame",
+						"comparison": 0,
+						"value": "\"packaging\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 659388857521776,
+					"parameters": {
+						"object-to-create": "IconBubbleBurst",
+						"layer": "\"GameIconsLayer\"",
+						"x": "PackagingGameIconImage.x",
+						"y": "PackagingGameIconImage.y",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "start-fade",
+					"objectClass": "PackagingGameIconImage",
+					"sid": 243382777639039,
+					"behaviorType": "Fade"
+				},
+				{
+					"id": "destroy",
+					"objectClass": "PackagingGameIconText",
+					"sid": 979019341526368
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 874548992640690,
+					"parameters": {
+						"variable": "CurrentGame",
+						"value": "\"\""
+					}
+				},
+				{
+					"id": "move-to-top",
+					"objectClass": "IconBubbleBurst",
+					"sid": 651583127951166
+				}
+			],
+			"sid": 627487401324377
+		}
+	],
+	"sid": 470193860071600
+}

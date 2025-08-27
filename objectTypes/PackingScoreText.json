@@ -1,0 +1,10 @@
+{
+	"name": "PackingScoreText",
+	"plugin-id": "Text",
+	"sid": 921378353073756,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": []
+}

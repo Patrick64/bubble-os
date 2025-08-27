@@ -1,0 +1,799 @@
+{
+	"name": "SnakeEvents",
+	"events": [
+		{
+			"eventType": "variable",
+			"name": "snakeDirection",
+			"type": "string",
+			"initialValue": "e",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 660338296233956
+		},
+		{
+			"eventType": "variable",
+			"name": "TailLength",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 902335783138616
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 730603649491108,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "SnakeIconClick"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-layer-visible",
+					"objectClass": "System",
+					"sid": 316887382326884,
+					"parameters": {
+						"layer": "\"SnakeLayer\"",
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-layer-interactive",
+					"objectClass": "System",
+					"sid": 604964577309805,
+					"parameters": {
+						"layer": "\"SnakeLayer\"",
+						"interactive": true
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 988840937929137,
+					"parameters": {
+						"variable": "CurrentGame",
+						"value": "\"snake\""
+					}
+				},
+				{
+					"callFunction": "CollectBottle",
+					"sid": 851633818948516
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "SnakeBottle",
+					"sid": 983104670273430,
+					"disabled": true,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "SnakeBubbleSprite",
+					"sid": 239303835621271,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"callFunction": "CollectBottle",
+					"sid": 994004938257578
+				}
+			],
+			"sid": 898817286901788
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-x-seconds",
+					"objectClass": "System",
+					"sid": 213903660556947,
+					"parameters": {
+						"interval-seconds": "0.25"
+					}
+				},
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 741610710947989,
+					"parameters": {
+						"variable": "CurrentGame",
+						"comparison": 0,
+						"value": "\"snake\""
+					}
+				}
+			],
+			"actions": [],
+			"sid": 935499827591152,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 826348902401936,
+							"parameters": {
+								"variable": "snakeDirection",
+								"comparison": 0,
+								"value": "\"e\""
+							}
+						},
+						{
+							"id": "compare-x",
+							"objectClass": "rubberduck",
+							"sid": 130632676424088,
+							"parameters": {
+								"comparison": 2,
+								"x-co-ordinate": "SnakeBoundary.X+96*12"
+							}
+						}
+					],
+					"actions": [
+						{
+							"callFunction": "AddTrail",
+							"sid": 806187024918754
+						},
+						{
+							"id": "set-position",
+							"objectClass": "rubberduck",
+							"sid": 784750354428243,
+							"parameters": {
+								"x": "rubberduck.X + rubberduck.Width",
+								"y": "rubberduck.Y"
+							}
+						}
+					],
+					"sid": 792505033670983
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 104882218109666,
+							"parameters": {
+								"variable": "snakeDirection",
+								"comparison": 0,
+								"value": "\"s\""
+							}
+						},
+						{
+							"id": "compare-y",
+							"objectClass": "rubberduck",
+							"sid": 657780180095658,
+							"parameters": {
+								"comparison": 2,
+								"y-co-ordinate": "SnakeBoundary.Y+96*5"
+							}
+						}
+					],
+					"actions": [
+						{
+							"callFunction": "AddTrail",
+							"sid": 964424444828259
+						},
+						{
+							"id": "set-position",
+							"objectClass": "rubberduck",
+							"sid": 409801433957657,
+							"parameters": {
+								"x": "rubberduck.X",
+								"y": "rubberduck.Y + rubberduck.Height"
+							}
+						}
+					],
+					"sid": 328076293166840
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 998403991907421,
+							"parameters": {
+								"variable": "snakeDirection",
+								"comparison": 0,
+								"value": "\"w\""
+							}
+						},
+						{
+							"id": "compare-x",
+							"objectClass": "rubberduck",
+							"sid": 408612219126242,
+							"parameters": {
+								"comparison": 4,
+								"x-co-ordinate": "SnakeBoundary.X+96"
+							}
+						}
+					],
+					"actions": [
+						{
+							"callFunction": "AddTrail",
+							"sid": 946151614904874
+						},
+						{
+							"id": "set-position",
+							"objectClass": "rubberduck",
+							"sid": 415946756572323,
+							"parameters": {
+								"x": "rubberduck.X - rubberduck.Width",
+								"y": "rubberduck.Y"
+							}
+						}
+					],
+					"sid": 711052986617512
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 857542768962895,
+							"parameters": {
+								"variable": "snakeDirection",
+								"comparison": 0,
+								"value": "\"n\""
+							}
+						},
+						{
+							"id": "compare-y",
+							"objectClass": "rubberduck",
+							"sid": 703789899874629,
+							"parameters": {
+								"comparison": 4,
+								"y-co-ordinate": "SnakeBoundary.Y+96"
+							}
+						}
+					],
+					"actions": [
+						{
+							"callFunction": "AddTrail",
+							"sid": 116191157153648
+						},
+						{
+							"id": "set-position",
+							"objectClass": "rubberduck",
+							"sid": 832632687193647,
+							"parameters": {
+								"x": "rubberduck.X",
+								"y": "rubberduck.Y - rubberduck.Height"
+							}
+						}
+					],
+					"sid": 629390628787616
+				},
+				{
+					"eventType": "block",
+					"conditions": [],
+					"actions": [],
+					"sid": 959364994623952
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "SnakeBubbleSprite",
+					"sid": 460162422385060,
+					"parameters": {
+						"object": "rubberduck"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "reset-eventvar",
+					"objectClass": "System",
+					"sid": 877855803588452,
+					"parameters": {
+						"variable": "TailLength"
+					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 963846297147325,
+					"parameters": {
+						"audio-file": "Duck Obstacle Hit",
+						"loop": "not-looping",
+						"volume": "0",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
+					}
+				}
+			],
+			"sid": 285935109042528,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "pick-all",
+							"objectClass": "System",
+							"sid": 516509292960667,
+							"parameters": {
+								"object": "SnakeBubbleSprite"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 529478422426810,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "SnakeBubbleSprite",
+									"sid": 981995189172555,
+									"parameters": {
+										"instance-variable": "Age",
+										"comparison": 4,
+										"value": "TailLength"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "destroy",
+									"objectClass": "SnakeBubbleSprite",
+									"sid": 571607890903127
+								}
+							],
+							"sid": 737123413488722
+						}
+					]
+				}
+			]
+		},
+		{
+			"functionName": "AddTrail",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionCopyPicked": false,
+			"functionIsAsync": false,
+			"functionParameters": [],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 662661721978034,
+					"parameters": {
+						"object-to-create": "SnakeBubbleSprite",
+						"layer": "\"SnakeLayer\"",
+						"x": "rubberduck.X",
+						"y": "rubberduck.Y",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				}
+			],
+			"sid": 827232747686919,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "pick-all",
+							"objectClass": "System",
+							"sid": 121664764112965,
+							"parameters": {
+								"object": "SnakeBubbleSprite"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "add-to-instvar",
+							"objectClass": "SnakeBubbleSprite",
+							"sid": 630915946977930,
+							"parameters": {
+								"instance-variable": "Age",
+								"value": "1"
+							}
+						}
+					],
+					"sid": 527049171438472,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "SnakeBubbleSprite",
+									"sid": 447989325580711,
+									"parameters": {
+										"instance-variable": "Age",
+										"comparison": 4,
+										"value": "TailLength"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "destroy",
+									"objectClass": "SnakeBubbleSprite",
+									"sid": 880976622165242
+								}
+							],
+							"sid": 480273354071531
+						}
+					]
+				}
+			]
+		},
+		{
+			"functionName": "CollectBottle",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionCopyPicked": false,
+			"functionIsAsync": false,
+			"functionParameters": [],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [
+				{
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 621845069890679,
+					"parameters": {
+						"variable": "TailLength",
+						"value": "3"
+					}
+				},
+				{
+					"id": "set-position",
+					"objectClass": "SnakeBottle",
+					"sid": 742147457123883,
+					"parameters": {
+						"x": "SnakeBoundary.X + int(random(0,12)) * 96",
+						"y": "SnakeBoundary.Y + int(random(0,6)) * 96"
+					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 166368070043618,
+					"parameters": {
+						"audio-file": "Duck Soap Collected AND Wrap Bubble Popped AND Cat Bubble Collected",
+						"loop": "not-looping",
+						"volume": "0",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
+					}
+				}
+			],
+			"sid": 168577178536039
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "SnakeBottle",
+					"sid": 380296719439323,
+					"parameters": {
+						"object": "rubberduck"
+					}
+				}
+			],
+			"actions": [
+				{
+					"callFunction": "CollectBottle",
+					"sid": 959221239309296
+				}
+			],
+			"sid": 622622008617777
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 876858466232924,
+					"parameters": {
+						"variable": "TailLength",
+						"comparison": 5,
+						"value": "16"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-layer-visible",
+					"objectClass": "System",
+					"sid": 868908922615612,
+					"parameters": {
+						"layer": "\"SnakeLayer\"",
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-layer-interactive",
+					"objectClass": "System",
+					"sid": 363039853893476,
+					"parameters": {
+						"layer": "\"SnakeLayer\"",
+						"interactive": false
+					}
+				},
+				{
+					"id": "reset-eventvar",
+					"objectClass": "System",
+					"sid": 237404547865817,
+					"parameters": {
+						"variable": "TailLength"
+					}
+				},
+				{
+					"callFunction": "DoSuccess",
+					"sid": 237751566513980,
+					"parameters": [
+						"\"\""
+					]
+				}
+			],
+			"sid": 342406525556451
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "key-is-down",
+					"objectClass": "Keyboard",
+					"sid": 913168535328647,
+					"parameters": {
+						"key": 37
+					}
+				},
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 763114862012018,
+					"parameters": {
+						"variable": "CurrentGame",
+						"comparison": 0,
+						"value": "\"snake\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 686684942157740,
+					"parameters": {
+						"variable": "snakeDirection",
+						"value": "\"w\""
+					}
+				},
+				{
+					"id": "set-image",
+					"objectClass": "rubberduck",
+					"sid": 524724451141066,
+					"parameters": {
+						"file": "duck-w.svg"
+					}
+				}
+			],
+			"sid": 367991852127930
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 148799498765188,
+					"parameters": {
+						"variable": "CurrentGame",
+						"comparison": 0,
+						"value": "\"snake\""
+					}
+				},
+				{
+					"id": "key-is-down",
+					"objectClass": "Keyboard",
+					"sid": 417524541566674,
+					"parameters": {
+						"key": 38
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 378447325304809,
+					"parameters": {
+						"variable": "snakeDirection",
+						"value": "\"n\""
+					}
+				},
+				{
+					"id": "set-image",
+					"objectClass": "rubberduck",
+					"sid": 679790198626645,
+					"parameters": {
+						"file": "duck-n.svg"
+					}
+				}
+			],
+			"sid": 881970887329320
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 901269531068915,
+					"parameters": {
+						"variable": "CurrentGame",
+						"comparison": 0,
+						"value": "\"snake\""
+					}
+				},
+				{
+					"id": "key-is-down",
+					"objectClass": "Keyboard",
+					"sid": 953323155453247,
+					"parameters": {
+						"key": 39
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 252870741438516,
+					"parameters": {
+						"variable": "snakeDirection",
+						"value": "\"e\""
+					}
+				},
+				{
+					"id": "set-image",
+					"objectClass": "rubberduck",
+					"sid": 395011881316500,
+					"parameters": {
+						"file": "duck-e.svg"
+					}
+				}
+			],
+			"sid": 440870732689487
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 147686187870523,
+					"parameters": {
+						"variable": "CurrentGame",
+						"comparison": 0,
+						"value": "\"snake\""
+					}
+				},
+				{
+					"id": "key-is-down",
+					"objectClass": "Keyboard",
+					"sid": 317459298291864,
+					"parameters": {
+						"key": 40
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 269929894459408,
+					"parameters": {
+						"variable": "snakeDirection",
+						"value": "\"s\""
+					}
+				},
+				{
+					"id": "set-image",
+					"objectClass": "rubberduck",
+					"sid": 502632121381513,
+					"parameters": {
+						"file": "duck-s.svg"
+					}
+				}
+			],
+			"sid": 514204223141910
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 224094556584734,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "WindowAmused"
+					}
+				},
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 922700333698803,
+					"parameters": {
+						"variable": "LastGame",
+						"comparison": 0,
+						"value": "\"snake\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 539614378049516,
+					"parameters": {
+						"object-to-create": "IconBubbleBurst",
+						"layer": "\"GameIconsLayer\"",
+						"x": "SnakeIconImage.x",
+						"y": "SnakeIconImage.y",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "start-fade",
+					"objectClass": "SnakeIconImage",
+					"sid": 110031253976260,
+					"behaviorType": "Fade"
+				},
+				{
+					"id": "destroy",
+					"objectClass": "SnakeIconText",
+					"sid": 862859502707222
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 599270128133135,
+					"parameters": {
+						"variable": "CurrentGame",
+						"value": "\"\""
+					}
+				},
+				{
+					"id": "move-to-top",
+					"objectClass": "IconBubbleBurst",
+					"sid": 392904415967269
+				}
+			],
+			"sid": 854469691448763
+		}
+	],
+	"sid": 246948984510311
+}

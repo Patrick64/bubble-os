@@ -1,0 +1,15 @@
+{
+	"name": "WindowDocUnlocked",
+	"plugin-id": "SVGPicture",
+	"sid": 516722387369095,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [
+		{
+			"effectId": "Coolok_Glitch",
+			"name": "Glitch"
+		}
+	]
+}

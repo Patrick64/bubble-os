@@ -1,0 +1,10 @@
+{
+	"name": "EmailMessage",
+	"plugin-id": "Text",
+	"sid": 784475384962776,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": []
+}

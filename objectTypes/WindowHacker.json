@@ -1,0 +1,15 @@
+{
+	"name": "WindowHacker",
+	"plugin-id": "SVGPicture",
+	"sid": 210350598924173,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [
+		{
+			"effectId": "Coolok_Glitch",
+			"name": "Glitch"
+		}
+	]
+}
